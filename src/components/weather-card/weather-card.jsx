@@ -13,13 +13,6 @@ const WeatherCard = ({weather}) => {
         windSpeed} = weather;
 
     const [showDetails, setShowDetails] = useState(false); 
-    
-    // useEffect(() => {
-    //     if (weather.location) {
-    //         autoRefresh(location)
-    //         return clearAutoRefresh()
-    //     }
-    // }, [])
 
     function parseAlt(str) {
         const sliced = str.slice((str.lastIndexOf('/')+1), (str.lastIndexOf('.')));
@@ -53,9 +46,9 @@ const WeatherCard = ({weather}) => {
                     {!isMD && <div className={styles.caret} ><i className="fas fa-angle-down"></i></div>}
                 </div>
                 <div className={styles.moreDetailes}>
-                    <span className={styles.percipitation}>סיכוי לגשם:&nbsp;{precipitation}</span>
-                    <span className={styles.humidity}>לחות:&nbsp;{humidity}</span>
-                    <div className={styles.wind}>מהירות הרוח:&nbsp;{windSpeed}</div>
+                    <span className={styles.percipitation}>Precipitation:&nbsp;{precipitation}</span>
+                    <span className={styles.humidity}>Humidity:&nbsp;{humidity}</span>
+                    <div className={styles.wind}>Wind Velocity:&nbsp;{windSpeed}</div>
                 </div>
             </span>
         );

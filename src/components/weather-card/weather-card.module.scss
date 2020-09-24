@@ -15,12 +15,12 @@
     
     @include respond(sm) {
         min-width: 19rem;
-        max-width: 24rem;
+        max-width: 26rem;
         max-height: 24rem;
     }
 
     @include respond(md) {
-        max-width: 19rem;
+        max-width: 26rem;
     }
 }
 
@@ -60,7 +60,7 @@
 }
 
 .locTimeTxt {
-    margin-right: 2rem;
+    margin-left: 2rem;
 }
 
 .location {
@@ -85,7 +85,7 @@
 .caret {
     font-size: 2.5rem;
     position: relative;
-    right: 10px;
+    left: 6px;
     top: 10px;
     color: #ffffff;
 }
@@ -97,7 +97,7 @@
 .percipitation {}
 
 .humidity {
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .wind {}

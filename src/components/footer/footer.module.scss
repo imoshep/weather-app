@@ -1,7 +1,12 @@
 .footer {
     text-align: center;
-    
-    & a:link, & a:visited, & a:hover {
-        color: white;
+    color: whitesmoke;
+    & a:link, & a:visited {
+        font-weight: 400;
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    & a:hover {
+        color: aqua;
     }
 }

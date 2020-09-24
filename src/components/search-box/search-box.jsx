@@ -38,7 +38,7 @@ const SearchBox = () =>{
     return (
         <div className={styles.searchBox}>
             <form action="" onSubmit={handleSubmit} className={styles.searchForm}>
-                <label htmlFor="searchInput" className={styles.label}>חפשו את מזג האוויר במיקום:</label>
+                <label htmlFor="searchInput" className={styles.label}>WHAT'S THE WEATHER NOW IN</label>
                 <input className={styles.input} type="text" name="searchInput" onChange={handleChange} value={inputValue}/>
                 <button className={styles.submit}><i className="fas fa-search"></i></button>
             </form>
