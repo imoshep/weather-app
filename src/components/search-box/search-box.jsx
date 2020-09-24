@@ -34,7 +34,8 @@ const SearchBox = () =>{
                 <input className={styles.input} type="text" name="searchInput" onChange={handleChange} value={inputValue}/>
                 <button className={styles.submit}><i className="fas fa-search"></i></button>
             </form>
-            {Object.keys(searchResult.data).length > 0 && <WeatherCard weather={searchResult.data}/>}
+            {searchResult.data && Object.keys(searchResult.data).length > 0 && <WeatherCard weather={searchResult.data}/>}
+            {searchResult.error && <h3>Requested location not found,<br/> try another query</h3> }
         </div>  
     );
 }

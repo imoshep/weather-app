@@ -6,6 +6,12 @@
     align-items: center;
     padding-block-end: 1rem;
 
+
+    &>h3 {
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 7px  rgba(6, 9, 153, 0.3);
+    }
     @include respond(sm) {
         padding-block-end: 2rem;
     }
@@ -24,6 +30,7 @@
     margin-bottom: 0.6rem;
     color: white;
     font-size: 1.6rem;
+    text-shadow: 2px 2px 7px  rgba(6, 9, 153, 0.6);
 }
 
 .input {
