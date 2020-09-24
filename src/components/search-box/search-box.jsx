@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import getWeather, {autoRefresh} from "../../services/weather-service";
+import getWeather from "../../services/weather-service";
 import WeatherCard from '../weather-card/weather-card'
 import styles from "./search-box.module.scss";
 
 const SearchBox = () =>{
     const [inputValue, setinputValue] = useState('');
     const [searchResult, setSearchResult] = useState({name: '', data: {}});
-    const [lastQuery, setLastQuery] = useState('');
+    // const [lastQuery, setLastQuery] = useState('');
     let interval;
 
     const handleChange = ({currentTarget}) => {
@@ -19,7 +19,7 @@ const SearchBox = () =>{
         try {
             let response = await getWeather(inputValue);
             setSearchResult({...response})
-            setLastQuery(inputValue)
+            // setLastQuery(inputValue)
             interval = setInterval(async () => {
                 response = await getWeather(inputValue);
                 setSearchResult({...response})

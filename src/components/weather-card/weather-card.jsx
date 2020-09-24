@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './weather-card.module.scss'
-import { autoRefresh } from "../../services/weather-service";
 import { useMediaQuery } from 'react-responsive'
 
 const WeatherCard = ({weather}) => {
