@@ -9,8 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 app.get('/google', async (req, res) => {
-    const query = req.query.city.replace(' ', '+');
-    console.log(query);
+    const query = req.query.location.trim().replace(' ', '+');
+    console.log('received query: ', query);
     const url = `https://www.google.com/search?q=weather+${query}`
     const browser = await puppeteer.launch();
     const page = await browser.newPage()
@@ -32,8 +32,6 @@ app.get('/google', async (req, res) => {
         res.status(404).send({success: false, data: error.message})
     }
     browser.close();
-    
-    // res.send('okay');
 })
 
 

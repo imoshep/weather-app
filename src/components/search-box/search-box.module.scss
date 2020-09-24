@@ -1,0 +1,34 @@
+@import '../../services/media-queries.scss';
+
+.searchForm {
+    text-align: center;
+
+    @include respond(sm) {
+        margin-bottom:3rem;
+    }
+}
+
+
+.label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.input {
+    border-radius: 7px;
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.submit {
+    background-color: transparent;
+    border: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    margin-right: 0.5rem;
+}

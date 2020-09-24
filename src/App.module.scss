@@ -1,0 +1,17 @@
+@import './services/media-queries.scss';
+
+.app {
+    background-size: cover;
+    background-image: url('https://imoshep-weather-app.s3.eu-central-1.amazonaws.com/bg-sm.jpg');
+    
+    @include respond(sm) {
+        background-image: url('https://imoshep-weather-app.s3.eu-central-1.amazonaws.com/bg-md.jpg');
+        background-position: 0 -70px;
+    }
+    
+    @include respond(xl) {
+        background-image: url('https://imoshep-weather-app.s3.eu-central-1.amazonaws.com/bg-lg.jpg');
+        
+        background-position: 0 -170px;
+    }
+}

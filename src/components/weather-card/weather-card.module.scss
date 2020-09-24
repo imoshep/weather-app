@@ -1,0 +1,103 @@
+@import '../../services/media-queries.scss';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: calc(max(19rem, 70vw));
+    max-width: calc(min(25rem, 80vw));
+    border: 1px solid beige;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(6, 9, 153, 0.3);
+    padding: 1rem;
+    max-height: 6rem;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    
+    @include respond(sm) {
+        min-width: 19rem;
+        max-width: 24rem;
+        max-height: 24rem;
+    }
+
+    @include respond(md) {
+        max-width: 19rem;
+    }
+}
+
+:global .show {
+    max-height: 12rem;
+}
+
+.topRow {
+    max-height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    @include respond(sm) {
+        max-height: 8rem;
+    }
+}
+
+.iconTemp {
+    display: flex;
+}
+
+.image {
+    object-fit: contain;
+    width: 100%;
+}
+
+.tempDeg {
+    display: flex;
+}
+
+.temp {
+    font-size: 3rem;
+}
+
+.deg {
+    position: relative;
+    top: 12px;
+}
+
+.locTimeTxt {
+    margin-right: 2rem;
+}
+
+.location {
+    display: block;
+    @include respond(sm) {
+        font-size: 2rem;
+    }
+}
+
+.time {
+    display: none;
+    @include respond(sm) {
+        display: block;
+    }
+}
+
+.text {
+    display: block;
+    font-size: 0.8em;
+}
+
+.caret {
+    font-size: 2.5rem;
+    position: relative;
+    right: 10px;
+    top: 10px;
+    color: #ffffff;
+}
+
+.moreDetailes {
+    margin-top: 1rem;
+}
+
+.percipitation {}
+
+.humidity {
+    margin-right: 1rem;
+}
+
+.wind {}

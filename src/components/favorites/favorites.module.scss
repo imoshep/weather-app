@@ -1,0 +1,15 @@
+@import '../../services/media-queries.scss';
+
+.favorites {
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: space-around;
+    gap:1rem;
+    
+    @include respond(md) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
+    }
+}
