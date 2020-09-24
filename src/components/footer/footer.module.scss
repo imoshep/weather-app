@@ -1,2 +1,7 @@
 .footer {
+    text-align: center;
+    
+    & a:link, & a:visited, & a:hover {
+        color: white;
+    }
 }
