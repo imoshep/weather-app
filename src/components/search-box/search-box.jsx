@@ -6,7 +6,6 @@ import styles from "./search-box.module.scss";
 const SearchBox = () =>{
     const [inputValue, setinputValue] = useState('');
     const [searchResult, setSearchResult] = useState({name: '', data: {}});
-    // const [lastQuery, setLastQuery] = useState('');
     let interval;
 
     const handleChange = ({currentTarget}) => {
@@ -19,7 +18,6 @@ const SearchBox = () =>{
         try {
             let response = await getWeather(inputValue);
             setSearchResult({...response})
-            // setLastQuery(inputValue)
             interval = setInterval(async () => {
                 response = await getWeather(inputValue);
                 setSearchResult({...response})
@@ -28,12 +26,6 @@ const SearchBox = () =>{
             console.log(error);
         }
     }
-    // auto-refresh
-
-    // if (Object.keys(searchResult.data).length > 0) {
-    //     console.log(inputValue);
-    //     autoRefresh(inputValue)
-    // } 
 
     return (
         <div className={styles.searchBox}>
