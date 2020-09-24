@@ -1,3 +1,4 @@
 {
-    "apiUrl": "http://localhost:8181"
+    "apiUrl-LOCAL": "http://localhost:8181",
+    "apiUrl": "https://imoshep-weather-server.herokuapp.com/"
 }
