@@ -5,7 +5,10 @@ import styles from "./search-box.module.scss";
 
 const SearchBox = () => {
   const [inputValue, setinputValue] = useState("");
-  const [searchResult, setSearchResult] = useState({ name: "", data: {} });
+  const [searchResult, setSearchResult] = useState({
+    success: false,
+    data: {},
+  });
   let interval;
 
   const handleChange = ({ currentTarget }) => {
@@ -17,7 +20,10 @@ const SearchBox = () => {
     if (interval) clearInterval(interval);
     try {
       let response = await getWeather(inputValue);
-      setSearchResult({ ...response });
+      response.success
+        ? setSearchResult({ ...response })
+        : setSearchResult({ ...response.response.data });
+      console.log(response);
       interval = setInterval(async () => {
         response = await getWeather(inputValue);
         setSearchResult({ ...response });
@@ -44,10 +50,10 @@ const SearchBox = () => {
           <i className="fas fa-search"></i>
         </button>
       </form>
-      {searchResult.data && Object.keys(searchResult.data).length > 0 && (
+      {searchResult.success && Object.keys(searchResult.data).length > 0 && (
         <WeatherCard weather={searchResult.data} />
       )}
-      {searchResult.error && (
+      {!searchResult.success && Object.keys(searchResult.data).length > 0 && (
         <h3>
           Requested location not found,
           <br /> try another query

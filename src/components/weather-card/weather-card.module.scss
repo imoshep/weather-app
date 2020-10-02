@@ -1,103 +1,105 @@
-@import '../../services/media-queries.scss';
+@import "../../services/media-queries.scss";
 
 .card {
-    display: flex;
-    flex-direction: column;
-    min-width: calc(max(19rem, 70vw));
-    max-width: calc(min(25rem, 80vw));
-    border: 1px solid beige;
-    border-radius: 5px;
-    box-shadow: 3px 3px 10px rgba(6, 9, 153, 0.3);
-    padding: 1rem;
-    max-height: 6rem;
-    overflow: hidden;
-    transition: max-height 0.4s ease-in-out;
-    
-    @include respond(sm) {
-        min-width: 19rem;
-        max-width: 26rem;
-        max-height: 24rem;
-    }
+  display: flex;
+  flex-direction: column;
+  min-width: calc(max(19rem, 70vw));
+  max-width: calc(min(25rem, 80vw));
+  border: 1px solid beige;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(6, 9, 153, 0.3);
+  padding: 1rem;
+  max-height: 6rem;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
 
-    @include respond(md) {
-        max-width: 26rem;
-    }
+  @include respond(sm) {
+    min-width: 19rem;
+    max-width: 26rem;
+    max-height: 24rem;
+  }
+
+  @include respond(md) {
+    max-width: 26rem;
+  }
 }
 
 :global .show {
-    max-height: 12rem;
+  max-height: 12rem;
 }
 
 .topRow {
-    max-height: 4rem;
-    display: flex;
-    justify-content: space-between;
-    @include respond(sm) {
-        max-height: 8rem;
-    }
+  max-height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  @include respond(sm) {
+    max-height: 8rem;
+  }
 }
 
 .iconTemp {
-    display: flex;
+  display: flex;
 }
 
 .image {
-    object-fit: contain;
-    width: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
 .tempDeg {
-    display: flex;
+  display: flex;
 }
 
 .temp {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .deg {
-    position: relative;
-    top: 12px;
+  position: relative;
+  top: 12px;
 }
 
 .locTimeTxt {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 
 .location {
-    display: block;
-    @include respond(sm) {
-        font-size: 2rem;
-    }
+  display: block;
+  @include respond(sm) {
+    font-size: 2rem;
+  }
 }
 
 .time {
-    display: none;
-    @include respond(sm) {
-        display: block;
-    }
+  display: none;
+  @include respond(sm) {
+    display: block;
+  }
 }
 
 .text {
-    display: block;
-    font-size: 0.8em;
+  display: block;
+  font-size: 0.8em;
 }
 
 .caret {
-    font-size: 2.5rem;
-    position: relative;
-    left: 6px;
-    top: 10px;
-    color: #ffffff;
+  font-size: 2.5rem;
+  position: relative;
+  left: 6px;
+  top: 10px;
+  color: #ffffff;
 }
 
 .moreDetailes {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
-.percipitation {}
+.percipitation {
+}
 
 .humidity {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
-.wind {}
+.wind {
+}

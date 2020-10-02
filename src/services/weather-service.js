@@ -6,6 +6,6 @@ export default async function getWeatherFromGoogle(location) {
     const response = await http.get(`${apiUrl}/google?location=${location}`);
     return response.data;
   } catch (err) {
-    return { message: "GET request failed", error: err };
+    return err;
   }
 }
