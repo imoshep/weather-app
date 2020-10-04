@@ -49,10 +49,8 @@ const SearchBox = () => {
           <i className="fas fa-search"></i>
         </button>
       </form>
-      {searchResult.success && Object.keys(searchResult.data).length > 0 && (
-        <WeatherCard weather={searchResult.data} />
-      )}
-      {!searchResult.success && Object.keys(searchResult.data).length > 0 && (
+      {searchResult.success && <WeatherCard weather={searchResult.data} />}
+      {!searchResult.success && (
         <h3>
           Requested location not found,
           <br /> try another query
