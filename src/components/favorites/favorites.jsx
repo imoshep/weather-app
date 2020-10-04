@@ -19,7 +19,6 @@ class Favorites extends Component {
       favsArray.map(async (location) => {
         try {
           let response = await getWeather(location.name);
-          console.log(response);
           location.data = { ...response.data };
         } catch (error) {
           console.log(error);

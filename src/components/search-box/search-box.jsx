@@ -23,7 +23,6 @@ const SearchBox = () => {
       response.success
         ? setSearchResult({ ...response })
         : setSearchResult({ ...response.response.data });
-      console.log(response);
       interval = setInterval(async () => {
         response = await getWeather(inputValue);
         setSearchResult({ ...response });
