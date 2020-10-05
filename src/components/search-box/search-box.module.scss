@@ -1,51 +1,50 @@
-@import '../../services/media-queries.scss';
+@import "../../services/media-queries.scss";
 
 .searchBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-block-end: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-end: 1rem;
 
+  & > h3 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 7px rgba(6, 9, 153, 0.3);
+  }
 
-    &>h3 {
-        text-align: center;
-        color: white;
-        text-shadow: 2px 2px 7px  rgba(6, 9, 153, 0.3);
-    }
-    @include respond(sm) {
-        padding-block-end: 2rem;
-    }
+  @include respond(sm) {
+    padding-block-end: 2rem;
+  }
 }
 .searchForm {
-    text-align: center;
+  text-align: center;
 
-    @include respond(sm) {
-        margin-bottom:3rem;
-    }
+  @include respond(sm) {
+    margin-bottom: 3rem;
+  }
 }
 
-
 .label {
-    display: block;
-    margin-bottom: 0.6rem;
-    color: white;
-    font-size: 1.6rem;
-    text-shadow: 2px 2px 7px  rgba(6, 9, 153, 0.6);
+  display: block;
+  margin-bottom: 0.6rem;
+  color: white;
+  font-size: 1.6rem;
+  text-shadow: 2px 2px 7px rgba(6, 9, 153, 0.6);
 }
 
 .input {
-    border-radius: 7px;
-    font-size: 1rem;
-    font-family: 'Rubik', sans-serif;
-    margin-bottom: 2rem;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 2rem;
 }
 
 .submit {
-    background-color: transparent;
-    border: none;
-    font-family: 'Rubik', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: white;
-    margin-right: 0.5rem;
+  background-color: transparent;
+  border: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin-right: 0.5rem;
 }
